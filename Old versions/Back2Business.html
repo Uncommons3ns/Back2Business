@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BACK 2 BUSINESS | Official Duo Website</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#080706',   /* Rich warm off-black */
+                            dark: '#110f0d',    /* Dark chocolate/charcoal */
+                            light: '#1b1714',   /* Warm earth dark */
+                            border: '#302821',  /* Warm bronze border */
+                            accent: '#d9a752',  /* Muted Gold/Amber matching the text lighting */
+                            accentHover: '#f5c573',
+                            muted: '#a3988f'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Space Grotesk', 'sans-serif'],
+                        display: ['Cinzel', 'serif'] /* Classy serif matching the album art */
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080706;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #302821;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d9a752;
+        }
+
+        /* Hide native scrollbar for carousel but keep functional scrolling */
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-none {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-brand-black text-stone-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-display text-xl md:text-2xl font-black tracking-widest flex items-center gap-2 text-brand-accent">
+                B2B <span class="text-stone-300 font-sans text-xs tracking-widest font-normal uppercase px-2 py-0.5 border border-brand-border rounded-sm">RECORDS</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-bold">
+                <a href="#music" class="hover:text-brand-accent transition-colors">Music</a>
+                <a href="#media" class="hover:text-brand-accent transition-colors">Media</a>
+                <a href="#dossier" class="hover:text-brand-accent transition-colors">Dossier</a>
+                <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://instagram.com" target="_blank" class="p-2 hover:text-brand-accent transition-colors" title="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="https://tiktok.com" target="_blank" class="p-2 hover:text-brand-accent transition-colors" title="TikTok"><i data-lucide="music-2" class="w-5 h-5"></i></a>
+                <a href="https://youtube.com" target="_blank" class="p-2 hover:text-brand-accent transition-colors" title="YouTube"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SYSTEM REBOOT HERO SECTION (Using uploaded art as background) -->
+    <!-- Note: Make sure the file "back2business.jpg" exists in the same folder -->
+    <section class="relative min-h-screen flex items-end pt-24 pb-16 bg-cover bg-center bg-no-repeat" style="background-image: url('back2business.jpg');">
+        
+        <!-- Gradient overlay to blend the image seamlessly and preserve text readability -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-black via-brand-black/40 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            <!-- Left Side: Copy/Branding -->
+            <div class="lg:col-span-8 flex flex-col justify-end space-y-6">
+                <span class="text-brand-accent uppercase tracking-widest text-xs font-bold flex items-center gap-2 font-mono">
+                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span> SYSTEM REBOOT // ONLINE
+                </span>
+                
+                <h1 class="font-display text-5xl md:text-8xl font-black tracking-normal leading-none uppercase text-stone-100">
+                    BACK 2<br><span class="text-brand-accent">BUSINESS</span>
+                </h1>
+                
+                <p class="text-brand-muted max-w-xl text-base md:text-lg">
+                    The wait is over. The heavy-weight sound returns. Built for the underground networks, designed to dominate playback streams. 
+                </p>
+
+                <!-- Action Links -->
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#music" class="px-6 py-4 bg-brand-accent text-brand-black font-bold uppercase tracking-wider text-xs flex items-center gap-2 hover:bg-brand-accentHover transition-all shadow-[0_0_20px_rgba(217,167,82,0.15)]">
+                        <i data-lucide="music" class="w-4 h-4"></i> Preview Music Vault
+                    </a>
+                    <a href="#media" class="px-6 py-4 bg-transparent border border-brand-border text-white font-bold uppercase tracking-wider text-xs flex items-center gap-2 hover:border-brand-accent hover:text-brand-accent transition-all">
+                        <i data-lucide="tv" class="w-4 h-4"></i> Watch Video
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Side Badge / Subtle Tech stamp -->
+            <div class="lg:col-span-4 hidden lg:flex justify-end font-mono text-[11px] text-brand-muted/70 flex-col items-end space-y-1">
+                <p>REF_ID: // 909-TRAP-SYSTEM</p>
+                <p>AUDIO STATE: LOSSLESS 24-BIT</p>
+                <p class="text-brand-accent">SECURE_CONNECTION: ESTABLISHED</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MUSIC PREVIEW CAROUSEL SECTION -->
+    <section id="music" class="py-24 bg-brand-dark border-b border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="text-brand-accent uppercase tracking-wider text-xs font-bold font-mono">AUDIO TRANSMISSIONS</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-black tracking-tight uppercase">PREVIEW VAULT</h2>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="flex items-center gap-3">
+                    <button id="slide-left" class="p-3 border border-brand-border hover:border-brand-accent text-stone-300 hover:text-brand-accent transition-all rounded" title="Scroll Left">
+                        <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                    </button>
+                    <button id="slide-right" class="p-3 border border-brand-border hover:border-brand-accent text-stone-300 hover:text-brand-accent transition-all rounded" title="Scroll Right">
+                        <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div id="carousel-container" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-4 px-2">
+                
+                <!-- CARD 1: [untitled] Player -->
+                <div class="min-w-[320px] md:min-w-[380px] snap-start bg-brand-light border border-brand-border p-5 rounded flex flex-col justify-between h-[420px] transition-transform hover:-translate-y-1 duration-300">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-[10px] font-mono">
+                            <span class="text-brand-accent px-2 py-0.5 bg-brand-accent/10 rounded">UNRELEASED PREVIEWS</span>
+                            <span>PLATFORM: [UNTITLED]</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-stone-100">STREETS_STILL_TALKIN.wav</h3>
+                        <p class="text-xs text-brand-muted">Direct high-quality folder feed. Preview ongoing draft mixes before official delivery.</p>
+                    </div>
+
+                    <!-- Interactive Waveform Mockup -->
+                    <div class="h-16 flex items-end gap-1 border-b border-brand-border pb-4">
+                        <div class="w-full bg-brand-accent/20 h-4 rounded-sm animate-pulse" style="animation-delay: 0.1s"></div>
+                        <div class="w-full bg-brand-accent/40 h-8 rounded-sm animate-pulse" style="animation-delay: 0.2s"></div>
+                        <div class="w-full bg-brand-accent/60 h-12 rounded-sm animate-pulse" style="animation-delay: 0.3s"></div>
+                        <div class="w-full bg-brand-accent h-16 rounded-sm"></div>
+                        <div class="w-full bg-brand-accent/70 h-10 rounded-sm"></div>
+                        <div class="w-full bg-brand-accent/30 h-6 rounded-sm"></div>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <a href="https://untitled.stream" target="_blank" class="px-4 py-2.5 bg-brand-accent hover:bg-brand-accentHover text-brand-black text-xs font-bold uppercase tracking-wider rounded transition-colors flex items-center gap-2">
+                            <i data-lucide="play" class="w-3.5 h-3.5 fill-brand-black"></i> Open in [Untitled]
+                        </a>
+                        <span class="text-[10px] font-mono text-brand-muted">V2 // WIP MIX</span>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Spotify Stream Embed -->
+                <div class="min-w-[320px] md:min-w-[380px] snap-start bg-brand-light border border-brand-border p-2 rounded h-[420px] transition-transform hover:-translate-y-1 duration-300">
+                    <!-- Note: Replace the 'src' link with your official Spotify album embed code -->
+                    <iframe style="border-radius:6px" 
+                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX0XUuwt0e08O?utm_source=generator&theme=0" 
+                            width="100%" 
+                            height="100%" 
+                            frameBorder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy"></iframe>
+                </div>
+
+                <!-- CARD 3: Apple Music Embed -->
+                <div class="min-w-[320px] md:min-w-[380px] snap-start bg-brand-light border border-brand-border p-2 rounded h-[420px] transition-transform hover:-translate-y-1 duration-300">
+                    <!-- Note: Replace the 'src' link with your official Apple Music embed code -->
+                    <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" 
+                            frameborder="0" 
+                            height="100%" 
+                            style="width:100%;overflow:hidden;border-radius:6px;" 
+                            sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" 
+                            src="https://embed.music.apple.com/us/album/back-in-business/1453265532?i=1453265545"></iframe>
+                </div>
+
+                <!-- CARD 4: Alternative DSP Launch Link -->
+                <div class="min-w-[320px] md:min-w-[380px] snap-start bg-brand-light border border-brand-border p-5 rounded flex flex-col justify-between h-[420px] transition-transform hover:-translate-y-1 duration-300">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-[10px] font-mono">
+                            <span class="text-brand-accent px-2 py-0.5 bg-brand-accent/10 rounded">ADDITIONAL STREAMS</span>
+                            <span>PLATFORM: MULTI</span>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-stone-100">DIRECT AUDIO NETWORKS</h3>
+                        <p class="text-xs text-brand-muted">Want to skip previews and support directly? Open our channels instantly on your preferred sound network.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <a href="https://soundcloud.com" target="_blank" class="w-full py-2.5 px-4 bg-brand-black hover:bg-brand-border border border-brand-border flex items-center justify-between text-xs font-bold uppercase tracking-wider rounded transition-colors">
+                            <span>SoundCloud</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                        <a href="https://bandcamp.com" target="_blank" class="w-full py-2.5 px-4 bg-brand-black hover:bg-brand-border border border-brand-border flex items-center justify-between text-xs font-bold uppercase tracking-wider rounded transition-colors">
+                            <span>Bandcamp</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                        <a href="https://music.youtube.com" target="_blank" class="w-full py-2.5 px-4 bg-brand-black hover:bg-brand-border border border-brand-border flex items-center justify-between text-xs font-bold uppercase tracking-wider rounded transition-colors">
+                            <span>YouTube Music</span> <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <div class="text-[10px] font-mono text-brand-muted text-center">
+                        CONNECTED GATEWAY // B2B
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MEDIA SHOWCASE (YOUTUBE & PHOTO GALLERY) -->
+    <section id="media" class="py-24 relative overflow-hidden border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12">
+                <span class="text-brand-accent uppercase tracking-wider text-xs font-bold font-mono">BROADCAST SIGNAL</span>
+                <h2 class="font-display text-4xl md:text-5xl font-black tracking-tight uppercase text-stone-100">MEDIA PORTAL</h2>
+            </div>
+
+            <!-- YouTube Video Embed -->
+            <div class="mb-16">
+                <div class="w-full aspect-video bg-brand-light border border-brand-border rounded overflow-hidden shadow-2xl relative">
+                    <!-- Note: Replace this ID with your actual YouTube Video ID -->
+                    <iframe class="w-full h-full absolute inset-0" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&mute=1" 
+                            title="Official Music Video" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+                <div class="mt-4 flex items-center justify-between text-xs font-mono text-brand-muted">
+                    <span>NOW STREAMING: "BACK 2 BUSINESS" OFFICIAL TRAILER</span>
+                    <span>1080P // VISUAL FEED</span>
+                </div>
+            </div>
+
+            <!-- Visuals Gallery Grid -->
+            <div>
+                <h3 class="font-display text-lg font-bold tracking-wider uppercase mb-6 flex items-center gap-2 text-brand-accent">
+                    <i data-lucide="aperture" class="w-5 h-5"></i> FIELD PHOTOS
+                </h3>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square bg-brand-light border border-brand-border overflow-hidden relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800" 
+                             alt="Crowd Shot" 
+                             class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-brand-black/40 group-hover:opacity-0 transition-opacity"></div>
+                    </div>
+
+                    <div class="aspect-square bg-brand-light border border-brand-border overflow-hidden relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800" 
+                             alt="Gear Setup" 
+                             class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-brand-black/40 group-hover:opacity-0 transition-opacity"></div>
+                    </div>
+
+                    <div class="aspect-square bg-brand-light border border-brand-border overflow-hidden relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800" 
+                             alt="Microphone Close" 
+                             class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-brand-black/40 group-hover:opacity-0 transition-opacity"></div>
+                    </div>
+
+                    <div class="aspect-square bg-brand-light border border-brand-border overflow-hidden relative group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=800" 
+                             alt="Dark city lights" 
+                             class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-500">
+                        <div class="absolute inset-0 bg-brand-black/40 group-hover:opacity-0 transition-opacity"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOSSIER SECTION (CLASSIFIED DUO BIO) -->
+    <section id="dossier" class="py-24 bg-brand-dark/50 border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Graphic Dossier / Profile Sheet (5 Columns) -->
+                <div class="lg:col-span-5 bg-brand-black p-8 border border-brand-border rounded shadow-xl relative font-mono text-xs text-brand-muted space-y-4">
+                    <span class="absolute top-4 right-4 px-2 py-0.5 bg-brand-accent/10 border border-brand-accent/20 text-brand-accent rounded text-[10px]">CLASSIFIED PROFILE</span>
+                    <h3 class="text-white text-base font-bold font-sans tracking-wide uppercase mb-4">DUO IDENTIFICATION</h3>
+                    
+                    <div class="space-y-2 border-b border-brand-border/40 pb-4">
+                        <div class="flex justify-between"><span class="text-white uppercase font-bold">OPERATIVES:</span> <span>STREET EXEC & CAPITAL</span></div>
+                        <div class="flex justify-between"><span class="text-white uppercase font-bold">GENRE PATTERN:</span> <span>TRAP / HOODTRAP</span></div>
+                        <div class="flex justify-between"><span class="text-white uppercase font-bold">LOCATION DEPLOYED:</span> <span>NEW YORK AREA</span></div>
+                    </div>
+
+                    <div class="space-y-2 border-b border-brand-border/40 pb-4">
+                        <div class="flex justify-between"><span class="text-white uppercase font-bold">LATEST CAMPAIGN:</span> <span class="text-brand-accent">"BACK 2 BUSINESS"</span></div>
+                        <div class="flex justify-between"><span class="text-white uppercase font-bold">AUDIO FREQUENCY:</span> <span>44.1 KHZ / LOSSLESS PREFERENCE</span></div>
+                    </div>
+
+                    <div class="bg-brand-light p-3 border border-brand-border rounded">
+                        <p class="leading-relaxed">"Operating under high distortion levels. B2B represents a return to active sonic manufacturing after brief transition period."</p>
+                    </div>
+                </div>
+
+                <!-- Text-Based Narrative (7 Columns) -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-brand-accent uppercase tracking-wider text-xs font-bold font-mono">// BACKGROUND ARCHIVE</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-black tracking-tight uppercase text-stone-100">THE STATEMENT</h2>
+                    <p class="text-brand-muted text-lg leading-relaxed">
+                        After dominating underground beat-leaking networks, the duo has formalized their strategy. By deploying raw bass sequences, rapid-fire hi-hat matrices, and highly dark vocal stylings, they engineered the complete "Back 2 Business" operation.
+                    </p>
+                    <p class="text-brand-muted">
+                        This is not just music; it's calculated execution. Combining industrial streetwear assets with sleek visual execution, they set new bounds for the emerging hoodtrap scene.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / NEWSLETTER SECTION -->
+    <section id="contact" class="py-24 border-b border-brand-border">
+        <div class="max-w-3xl mx-auto px-6 text-center space-y-8">
+            <span class="text-brand-accent uppercase tracking-wider text-xs font-bold font-mono">SECURE COMMUNICATIONS</span>
+            <h2 class="font-display text-4xl md:text-5xl font-black tracking-tight uppercase text-stone-100">JOIN THE DIRECTORS BOARD</h2>
+            <p class="text-brand-muted text-sm max-w-md mx-auto">
+                Sign up to secure early transmission updates. Receive unreleased [untitled] folder drop links, physical merchandise pre-sales, and show announcements directly.
+            </p>
+
+            <!-- Email Input Form -->
+            <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Transmission Received.');">
+                <input type="email" placeholder="ENTER SECURE EMAIL" required 
+                       class="flex-grow px-4 py-3 bg-brand-light border border-brand-border focus:border-brand-accent text-white uppercase tracking-wider text-xs outline-none placeholder-brand-muted/70 transition-colors">
+                <button type="submit" class="px-6 py-3 bg-brand-accent hover:bg-brand-accentHover text-brand-black text-xs tracking-wider font-bold uppercase transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="send" class="w-3.5 h-3.5"></i> Subscribe
+                </button>
+            </form>
+
+            <div class="pt-8 border-t border-brand-border flex justify-center gap-12 text-xs uppercase tracking-widest font-mono text-brand-muted">
+                <div>
+                    <p class="font-bold text-white mb-1">GENERAL INQUIRIES</p>
+                    <a href="mailto:info@b2bduo.com" class="hover:text-brand-accent transition-colors">info@b2bduo.com</a>
+                </div>
+                <div>
+                    <p class="font-bold text-white mb-1">BOOKINGS / PRESS</p>
+                    <a href="mailto:booking@b2bduo.com" class="hover:text-brand-accent transition-colors">booking@b2bduo.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-12 bg-brand-black border-t border-brand-border text-brand-muted text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p>&copy; 2026 B2B. All transmission assets encrypted.</p>
+            <div class="flex items-center gap-6 uppercase tracking-wider">
+                <a href="#" class="hover:text-brand-accent transition-colors">Back To Top</a>
+                <span>//</span>
+                <span class="text-brand-accent font-mono">B2B VERSION 1.1</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic (Carousel + Icons) -->
+    <script>
+        // Init Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+
+        // Carousel Slider Navigation
+        const carousel = document.getElementById('carousel-container');
+        const leftBtn = document.getElementById('slide-left');
+        const rightBtn = document.getElementById('slide-right');
+
+        leftBtn.addEventListener('click', () => {
+            // Scroll back 1 card width (380px card + 24px gap)
+            carousel.scrollBy({
+                left: -404,
+                behavior: 'smooth'
+            });
+        });
+
+        rightBtn.addEventListener('click', () => {
+            // Scroll forward 1 card width
+            carousel.scrollBy({
+                left: 404,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
